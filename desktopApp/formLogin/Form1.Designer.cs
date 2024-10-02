@@ -28,19 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             login_button = new Button();
             userInput_label = new Label();
             userInput_textBox = new TextBox();
             passwordInput_textBox = new TextBox();
             passwordInput_label = new Label();
             status_label = new Label();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // login_button
             // 
-            login_button.Location = new Point(585, 354);
+            login_button.Location = new Point(209, 226);
+            login_button.Margin = new Padding(3, 2, 3, 2);
             login_button.Name = "login_button";
-            login_button.Size = new Size(94, 29);
+            login_button.Size = new Size(108, 40);
             login_button.TabIndex = 0;
             login_button.Text = "Logar";
             login_button.UseVisualStyleBackColor = true;
@@ -49,56 +53,74 @@
             // userInput_label
             // 
             userInput_label.AutoSize = true;
-            userInput_label.Location = new Point(83, 119);
+            userInput_label.Location = new Point(60, 142);
             userInput_label.Name = "userInput_label";
-            userInput_label.Size = new Size(59, 20);
+            userInput_label.Size = new Size(47, 15);
             userInput_label.TabIndex = 1;
             userInput_label.Text = "Usuário";
             // 
             // userInput_textBox
             // 
-            userInput_textBox.Location = new Point(148, 116);
+            userInput_textBox.Location = new Point(117, 140);
+            userInput_textBox.Margin = new Padding(3, 2, 3, 2);
             userInput_textBox.Name = "userInput_textBox";
-            userInput_textBox.Size = new Size(125, 27);
+            userInput_textBox.Size = new Size(200, 23);
             userInput_textBox.TabIndex = 2;
             // 
             // passwordInput_textBox
             // 
-            passwordInput_textBox.Location = new Point(148, 154);
+            passwordInput_textBox.Location = new Point(117, 169);
+            passwordInput_textBox.Margin = new Padding(3, 2, 3, 2);
             passwordInput_textBox.Name = "passwordInput_textBox";
-            passwordInput_textBox.Size = new Size(125, 27);
+            passwordInput_textBox.Size = new Size(200, 23);
             passwordInput_textBox.TabIndex = 4;
             // 
             // passwordInput_label
             // 
             passwordInput_label.AutoSize = true;
-            passwordInput_label.Location = new Point(83, 157);
+            passwordInput_label.Location = new Point(60, 171);
             passwordInput_label.Name = "passwordInput_label";
-            passwordInput_label.Size = new Size(49, 20);
+            passwordInput_label.Size = new Size(39, 15);
             passwordInput_label.TabIndex = 3;
             passwordInput_label.Text = "Senha";
             // 
             // status_label
             // 
             status_label.AutoSize = true;
-            status_label.Location = new Point(348, 358);
+            status_label.Location = new Point(269, 268);
             status_label.Name = "status_label";
-            status_label.Size = new Size(0, 20);
+            status_label.Size = new Size(0, 15);
             status_label.TabIndex = 5;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(144, 6);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(139, 129);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 6;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = SystemColors.AppWorkspace;
+            ClientSize = new Size(442, 338);
+            Controls.Add(pictureBox1);
             Controls.Add(status_label);
             Controls.Add(passwordInput_textBox);
             Controls.Add(passwordInput_label);
             Controls.Add(userInput_textBox);
             Controls.Add(userInput_label);
             Controls.Add(login_button);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -111,5 +133,6 @@
         private TextBox passwordInput_textBox;
         private Label passwordInput_label;
         private Label status_label;
+        private PictureBox pictureBox1;
     }
 }
